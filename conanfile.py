@@ -18,6 +18,7 @@ class MitkConan(ConanFile):
         "python": [True, False]}
     default_options = "=False\n".join(options.keys()) + "=False"
     generators = "cmake"
+    short_paths = True
 
     def requirements(self):
         if self.options.qt == True and not self.options.system_qt:
